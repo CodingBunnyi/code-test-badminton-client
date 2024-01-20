@@ -74,7 +74,6 @@ function App() {
                       sx={{ mx: 2}}
                       onChange={(e) => updateChange(e, match.id, 'score')}
                     />
-                    {/* {round1Data[index].name} */}
                 </div>
               </div>
               </Card>
