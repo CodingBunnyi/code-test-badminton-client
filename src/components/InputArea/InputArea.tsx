@@ -107,7 +107,9 @@ const InputArea = (props: any, _ref: any) => {
       <AddCircleRoundedIcon
         color="primary"
         sx={{ cursor: 'pointer'}}
-        onClick={() => setRound1Data([...round1Data, {id: nanoid(), players:[{name: '', score: 0}, {name: '', score: 0}]}])}
+        onClick={() => 
+          setRound1Data([...round1Data, {id: nanoid(), players:[{name: '', score: 0}, {name: '', score: 0}]}])
+        }
       />
     </Grid>
     <Grid item xs={12} sm={6}>
@@ -173,7 +175,9 @@ const InputArea = (props: any, _ref: any) => {
       <AddCircleRoundedIcon
         color="primary"
         sx={{ cursor: 'pointer'}}
-        onClick={() => setRound2Data([...round2Data, {id: nanoid(), players:[{name: '', score: ''}, {name: '', score: ''}]}])}
+        onClick={() => 
+          setRound2Data([...round2Data, {id: nanoid(), players:[{name: '', score: ''}, {name: '', score: ''}]}])
+        }
       />
     </Grid>
   </Grid>
