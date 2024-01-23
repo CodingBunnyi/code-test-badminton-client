@@ -1,4 +1,5 @@
 import React from 'react'
+import './ResultArea.css'
 import Dialog from '@mui/material/Dialog';
 import DialogActions from '@mui/material/DialogActions';
 import DialogContent from '@mui/material/DialogContent';
@@ -37,7 +38,7 @@ const ResultArea = ({isResultShow, setIsResultShow, resultData}) => {
           }}
           pageSizeOptions={[5, 10]}
         />
-        <Typography variant="h6" sx={{ mt: '16px'}}>Next Round</Typography>
+        <Typography variant="h6" className="subTitle">Next Round</Typography>
         {pairResult.map((info, index) => (
           <p key={index}>{info.player1} VS {info.player2}</p>
         ))}

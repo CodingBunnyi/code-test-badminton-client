@@ -12,17 +12,16 @@ function App() {
 
   const getResult = async() => {
     const { data } = await calculateResult(inputStateRef.current?.getData())
-    console.log(data)
     setResultData(data)
     setIsResultShow(true)
   }
   return (
     <div className="App">
       <Paper variant="outlined" sx={{ my: 5, mx: [5, 10, 20], p: 3}}>
-        <InputArea ref={inputStateRef}/>
+        <InputArea ref={ inputStateRef }/>
       </Paper>
-      <ResultArea isResultShow={isResultShow} setIsResultShow={setIsResultShow} resultData={resultData}/>
-      <Button variant="contained" sx={{ mb: '16px' }} onClick={getResult}>Show Result</Button>
+      <ResultArea isResultShow={isResultShow} setIsResultShow={ setIsResultShow } resultData={resultData}/>
+      <Button variant="contained" sx={{ mb: '16px' }} onClick={ getResult }>Show Result</Button>
     </div>
   );
 }
