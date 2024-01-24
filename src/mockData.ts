@@ -1,7 +1,3 @@
-// 一个round是10个match
-// 一个match是21分制的一局（一轮游）
-// 单打的情况
-// 输入的数据
 const mockRound1Data = [
   {
       "id": "p538_9stqfEziE8wLMBjX",
@@ -167,7 +163,7 @@ const mockRound1Data = [
           },
           {
               "name": "name20",
-              "score": "13",
+              "score": "9",
               "win": 0,
               "scoreDiff": -8
           }

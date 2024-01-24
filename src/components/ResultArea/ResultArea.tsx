@@ -1,5 +1,4 @@
 import React from 'react'
-import './ResultArea.css'
 import Dialog from '@mui/material/Dialog';
 import DialogActions from '@mui/material/DialogActions';
 import DialogContent from '@mui/material/DialogContent';
@@ -24,6 +23,7 @@ const ResultArea = ({isResultShow, setIsResultShow, resultData}) => {
       maxWidth='md'
       aria-labelledby="alert-dialog-title"
       aria-describedby="alert-dialog-description"
+      data-testid="result-area"
     >
       <DialogTitle>{"Result"}</DialogTitle>
       <DialogContent>
@@ -38,10 +38,10 @@ const ResultArea = ({isResultShow, setIsResultShow, resultData}) => {
           }}
           pageSizeOptions={[5, 10]}
         />
-        <Typography variant="h6" className="subTitle">Next Round</Typography>
-        {pairResult.map((info, index) => (
+        <Typography variant="h6" sx={{ mt: '16px'}}>Next Round</Typography>
+        {pairResult ? pairResult.map((info, index) => (
           <p key={index}>{info.player1} VS {info.player2}</p>
-        ))}
+        )) : null}
       </DialogContent>
       <DialogActions>
         <Button onClick={() => setIsResultShow(false)}>OK</Button>
