@@ -43,6 +43,7 @@ const InputArea = (props: any, _ref: any) => {
       return {round1Data, round2Data}
     }
   }))
+
   return (
   <Grid container>
     <Grid item xs={12} sm={6} className="LeftGrid">
@@ -50,6 +51,7 @@ const InputArea = (props: any, _ref: any) => {
         {round1Data.map((match, index) => (
           <Card key={match.id}  className="matchCardLeft">
             <CloseOutlinedIcon
+              data-testid="delete-btn-1"
               color="action"
               className="closeIcon"
               onClick={(e) => deleteRound1Match(e, match.id)}
@@ -61,6 +63,7 @@ const InputArea = (props: any, _ref: any) => {
                   <TextField
                     required
                     label="Player name"
+                    data-testid={index + '_p1_round1_text_field_name'}
                     variant="standard"
                     sx={{ mx: 2, mt: '5px'}}
                     onChange={(e) => updateRound1Change(e, match.id, 'name', 0)}
@@ -71,6 +74,7 @@ const InputArea = (props: any, _ref: any) => {
                     required
                     label="Player score"
                     variant="standard"
+                    data-testid={index + '_p1_round1_text_field_score'}
                     type="number"
                     sx={{ mx: 2, mt: '5px'}}
                     onChange={(e) => updateRound1Change(e, match.id, 'score', 0)}
@@ -84,6 +88,7 @@ const InputArea = (props: any, _ref: any) => {
                     required
                     label="Player name"
                     variant="standard"
+                    data-testid={index + '_p2_round1_text_field_name'}
                     sx={{ mx: 2, mt: '5px'}}
                     onChange={(e) => updateRound1Change(e, match.id, 'name', 1)}
                     defaultValue={match.players[1].name}
@@ -94,6 +99,7 @@ const InputArea = (props: any, _ref: any) => {
                     label="Player score"
                     variant="standard"
                     type="number"
+                    data-testid={index + '_p2_round1_text_field_score'}
                     sx={{ mx: 2, mt: '5px'}}
                     onChange={(e) => updateRound1Change(e, match.id, 'score', 1)}
                     defaultValue={match.players[1].score}
@@ -104,6 +110,7 @@ const InputArea = (props: any, _ref: any) => {
           </Card>
         ))}
       <AddCircleRoundedIcon
+        data-testid="add-btn-1"
         color="primary"
         className="addBtn"
         onClick={() => 
@@ -116,6 +123,7 @@ const InputArea = (props: any, _ref: any) => {
         {round2Data.map((match, index) => (
           <Card key={match.id}  className="matchCardRight">
             <CloseOutlinedIcon
+              data-testid="delete-btn-2"
               color="action"
               className="closeIcon"
               onClick={(e) => deleteRound2Match(e, match.id)}
@@ -128,6 +136,7 @@ const InputArea = (props: any, _ref: any) => {
                     required
                     label="Player name"
                     variant="standard"
+                    data-testid={index + '_p1_round2_text_field_name'}
                     sx={{ mx: 2, mt: '5px'}}
                     onChange={(e) => updateRound2Change(e, match.id, 'name', 0)}
                     defaultValue={match.players[0].name}
@@ -138,6 +147,7 @@ const InputArea = (props: any, _ref: any) => {
                     label="Player score"
                     variant="standard"
                     type="number"
+                    data-testid={index + '_p1_round2_text_field_score'}
                     sx={{ mx: 2, mt: '5px'}}
                     onChange={(e) => updateRound2Change(e, match.id, 'score', 0)}
                     defaultValue={match.players[0].score}
@@ -152,6 +162,7 @@ const InputArea = (props: any, _ref: any) => {
                     label="Player name"
                     variant="standard"
                     sx={{ mx: 2, mt: '5px'}}
+                    data-testid={index + '_p2_round2_text_field_name'}
                     onChange={(e) => updateRound2Change(e, match.id, 'name', 1)}
                     defaultValue={match.players[1].name}
                     size="small"
@@ -162,6 +173,7 @@ const InputArea = (props: any, _ref: any) => {
                     variant="standard"
                     type="number"
                     sx={{ mx: 2, mt: '5px'}}
+                    data-testid={index + '_p2_round2_text_field_score'}
                     onChange={(e) => updateRound2Change(e, match.id, 'score', 1)}
                     defaultValue={match.players[1].score}
                     size="small"
@@ -171,6 +183,7 @@ const InputArea = (props: any, _ref: any) => {
           </Card>
         ))}
       <AddCircleRoundedIcon
+        data-testid="add-btn-2"
         color="primary"
         className="addBtn"
         onClick={() => 

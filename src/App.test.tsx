@@ -35,7 +35,10 @@ describe('App component', () => {
   test('clicking "Show Result" button triggers API call and updates state', async () => {
     render(<App />);
     
-    const testData =  { sortedResult: [], pairResult: [] }
+    const testData =  { sortedResult: [
+            { name: 'John', rank: 1, pPoint: 20, sPoint: 10 },
+            { name: 'Jane', rank: 2, pPoint: 18, sPoint: 12 },
+          ], pairResult: [] }
     
     const showResultButton = screen.getByText('Show Result');
 
@@ -52,7 +55,6 @@ describe('App component', () => {
     await waitFor(() => {
       const resultArea = screen.getByTestId('result-area');
       expect(resultArea).toBeInTheDocument();
-    });
-
+    })
   });
 })

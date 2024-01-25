@@ -15,11 +15,13 @@ const ResultArea = ({isResultShow, setIsResultShow, resultData}) => {
     { field: 'pPoint', headerName: 'Primary Points', width: 150, align: 'center' },
     { field: 'sPoint', headerName: 'Secondary Points', width: 150, align: 'center' },
   ];
-
+  const closeDialog = () => {
+    setIsResultShow(false)
+  }
   return(
     <Dialog
       open={isResultShow}
-      onClose={() => setIsResultShow(false)}
+      onClose={closeDialog}
       maxWidth='md'
       aria-labelledby="alert-dialog-title"
       aria-describedby="alert-dialog-description"
@@ -39,12 +41,12 @@ const ResultArea = ({isResultShow, setIsResultShow, resultData}) => {
           pageSizeOptions={[5, 10]}
         />
         <Typography variant="h6" sx={{ mt: '16px'}}>Next Round</Typography>
-        {pairResult ? pairResult.map((info, index) => (
+        {pairResult.map((info, index) => (
           <p key={index}>{info.player1} VS {info.player2}</p>
-        )) : null}
+        ))}
       </DialogContent>
       <DialogActions>
-        <Button onClick={() => setIsResultShow(false)}>OK</Button>
+        <Button data-testid="ok-btn" onClick={closeDialog}>OK</Button>
       </DialogActions>
     </Dialog>
   )
