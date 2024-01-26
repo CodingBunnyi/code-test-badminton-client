@@ -1,6 +1,17 @@
-# Getting Started with Create React App
+# Getting Started with the Badminton Tournament Pairing System
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This is the pairing system frontend repository. \
+You can use the interface to calculate the match results and pair the players for the next round.\
+There are some default values in the `src/mockData.ts` file. If you don't want them, just leave the `mockRound1Data` and `mockRound2Data` to be an empty array `[]`. \
+Remember: Do not remove the `src/mockData.ts` file or `mockRound1Data` or `mockRound1Data` arrays in the file.
+
+## Backend Repository
+Backend Repository: https://github.com/CodingBunnyi/code-test-badminton-server
+
+## How to Start the Project
+Frontend: In the project frontend directory, run: `npm start`\
+Backend: In the project backend directory, run: `node index.js`
+
 
 ## Available Scripts
 
@@ -39,8 +50,3 @@ Instead, it will copy all the configuration files and the transitive dependencie
 
 You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
 
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
