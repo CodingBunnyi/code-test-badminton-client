@@ -124,7 +124,7 @@ const InputArea: React.ForwardRefRenderFunction<InputAreaRef, InputAreaProps> = 
         color="primary"
         className="addBtn"
         onClick={() => 
-          setRound1Data([...round1Data, {id: nanoid(), players:[{name: '', score: 0}, {name: '', score: 0}]}])
+          setRound1Data([...round1Data, {id: nanoid(), players:[{name: '', score: ''}, {name: '', score: ''}]}])
         }
       />
     </Grid>
