@@ -1,0 +1,11 @@
+.matchCardLeft {
+  margin-right: 24px;
+  margin-bottom: 24px;
+  position: relative;
+}
+
+.matchCardRight {
+  margin-left: 24px;
+  margin-bottom: 24px;
+  position: relative;
+}

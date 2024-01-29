@@ -38,11 +38,11 @@ describe('InputArea component', () => {
   test('deletes a match from Round 1 when the "Delete" button is clicked', () => {
     render(<InputArea />);
     
-    const initialMatchesCountRound1 = screen.getAllByTestId('delete-btn-1').length;
+    const initialMatchesCountRound1 = screen.getAllByTestId('delete-btn-round1').length;
 
-    fireEvent.click(screen.getAllByTestId('delete-btn-1')[0]);
+    fireEvent.click(screen.getAllByTestId('delete-btn-round1')[0]);
 
-    const updatedMatchesCountRound1 = screen.getAllByTestId('delete-btn-1').length;
+    const updatedMatchesCountRound1 = screen.getAllByTestId('delete-btn-round1').length;
 
     expect(updatedMatchesCountRound1).toBe(initialMatchesCountRound1 - 1);
 
@@ -51,11 +51,11 @@ describe('InputArea component', () => {
   test('deletes a match from Round 2 when the "Delete" button is clicked', () => {
     render(<InputArea />);
     
-    const initialMatchesCountRound2 = screen.getAllByTestId('delete-btn-2').length;
+    const initialMatchesCountRound2 = screen.getAllByTestId('delete-btn-round2').length;
 
-    fireEvent.click(screen.getAllByTestId('delete-btn-2')[0]);
+    fireEvent.click(screen.getAllByTestId('delete-btn-round2')[0]);
 
-    const updatedMatchesCountRound2 = screen.getAllByTestId('delete-btn-2').length;
+    const updatedMatchesCountRound2 = screen.getAllByTestId('delete-btn-round2').length;
 
     expect(updatedMatchesCountRound2).toBe(initialMatchesCountRound2 - 1);
 
@@ -64,7 +64,7 @@ describe('InputArea component', () => {
   test('edit players with an index other than 0.', () => {
     render(<InputArea />);
 
-    const p = screen.getByTestId('1_p1_round1_text_field_score').querySelector('input');
+    const p = screen.getByTestId('1-p1-round1-text-field-score').querySelector('input');
     fireEvent.change(p, { target: { value: 12 } });
     expect(p.value).toBe('12');
   });
@@ -72,7 +72,7 @@ describe('InputArea component', () => {
   test('updates player1 name in Round 1 when input value changes', () => {
     render(<InputArea />);
 
-    const p = screen.getByTestId('0_p1_round1_text_field_name').querySelector('input');
+    const p = screen.getByTestId('0-p1-round1-text-field-name').querySelector('input');
     fireEvent.change(p, { target: { value: 'John Doe' } });
     expect(p.value).toBe('John Doe');
 
@@ -81,7 +81,7 @@ describe('InputArea component', () => {
   test('updates player1 score in Round 1 when input value changes', () => {
     render(<InputArea />);
 
-    const p = screen.getByTestId('0_p1_round1_text_field_score').querySelector('input');
+    const p = screen.getByTestId('0-p1-round1-text-field-score').querySelector('input');
     fireEvent.change(p, { target: { value: 12 } });
     expect(p.value).toBe('12');
   });
@@ -89,7 +89,7 @@ describe('InputArea component', () => {
   test('updates player2 name in Round 1 when input value changes', () => {
     render(<InputArea />);
 
-    const p = screen.getByTestId('0_p2_round1_text_field_name').querySelector('input');
+    const p = screen.getByTestId('0-p2-round1-text-field-name').querySelector('input');
     fireEvent.change(p, { target: { value: 'John Doe' } });
     expect(p.value).toBe('John Doe');
   });
@@ -97,7 +97,7 @@ describe('InputArea component', () => {
   test('updates player2 score in Round 1 when input value changes', () => {
     render(<InputArea />);
 
-    const p = screen.getByTestId('0_p2_round1_text_field_score').querySelector('input');
+    const p = screen.getByTestId('0-p2-round1-text-field-score').querySelector('input');
     fireEvent.change(p, { target: { value: 12 } });
     expect(p.value).toBe('12');
   });
@@ -105,7 +105,7 @@ describe('InputArea component', () => {
   test('updates player1 name in Round 2 when input value changes', () => {
     render(<InputArea />);
 
-    const p = screen.getByTestId('0_p1_round2_text_field_name').querySelector('input');
+    const p = screen.getByTestId('0-p1-round2-text-field-name').querySelector('input');
     fireEvent.change(p, { target: { value: 'John Doe' } });
     expect(p.value).toBe('John Doe');
   });
@@ -113,7 +113,7 @@ describe('InputArea component', () => {
   test('updates player1 score in Round 2 when input value changes', () => {
     render(<InputArea />);
 
-    const p = screen.getByTestId('0_p1_round2_text_field_score').querySelector('input');
+    const p = screen.getByTestId('0-p1-round2-text-field-score').querySelector('input');
     fireEvent.change(p, { target: { value: 12 } });
     expect(p.value).toBe('12');
   });
@@ -121,7 +121,7 @@ describe('InputArea component', () => {
   test('updates player2 name in Round 2 when input value changes', () => {
     render(<InputArea />);
 
-    const p = screen.getByTestId('0_p2_round2_text_field_name').querySelector('input');
+    const p = screen.getByTestId('0-p2-round2-text-field-name').querySelector('input');
     fireEvent.change(p, { target: { value: 'John Doe' } });
     expect(p.value).toBe('John Doe');
   });
@@ -129,7 +129,7 @@ describe('InputArea component', () => {
   test('updates player2 score in Round 2 when input value changes', () => {
     render(<InputArea />);
 
-    const p = screen.getByTestId('0_p2_round2_text_field_score').querySelector('input');
+    const p = screen.getByTestId('0-p2-round2-text-field-score').querySelector('input');
     fireEvent.change(p, { target: { value: 12 } });
     expect(p.value).toBe('12');
   });

@@ -12,18 +12,6 @@
   border-right: 1px solid rgba(0, 0, 0, 0.12);
 }
 
-.matchCardLeft {
-  margin-right: 24px;
-  margin-bottom: 24px;
-  position: relative;
-}
-
-.matchCardRight {
-  margin-left: 24px;
-  margin-bottom: 24px;
-  position: relative;
-}
-
 .closeIcon {
   position: absolute;
   right: 24px;
