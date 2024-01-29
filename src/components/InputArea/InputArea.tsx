@@ -7,40 +7,50 @@ import AddCircleRoundedIcon from '@mui/icons-material/AddCircleRounded';
 import CloseOutlinedIcon from '@mui/icons-material/CloseOutlined';
 import { mockRound1Data } from '../../mockData'
 import { mockRound2Data } from '../../mockData'
-const InputArea = (props: any, _ref: any) => {
-  const [round1Data, setRound1Data] = useState(mockRound1Data as any[])
-  const [round2Data, setRound2Data] = useState(mockRound2Data as any[])
-  const updateRound1Change = (e: any, id: string, attr: string, playerIndex: number) => {
+import { InputAreaRef, RoundData } from '../../type';
+
+interface InputAreaProps {
+  // Define component props here
+}
+const InputArea: React.ForwardRefRenderFunction<InputAreaRef, InputAreaProps> = (_props, _ref) => {
+  const [round1Data, setRound1Data] = useState<RoundData>(mockRound1Data)
+  const [round2Data, setRound2Data] = useState<RoundData>(mockRound2Data)
+  const updateRound1Change = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>, id: string, attr: string, playerIndex: number) => {
     const newData = [...round1Data]
     const index = newData.findIndex(part => part.id === id)
     newData[index].players[playerIndex][attr] = e.target.value
     setRound1Data(newData)
   }
 
-  const deleteRound1Match = (e: any, id: string) => {
+  const deleteRound1Match = (_e: React.MouseEvent<SVGSVGElement, MouseEvent>, id: string) => {
     const newData = [...round1Data]
     const index = newData.findIndex(part => part.id === id)
     newData.splice(index, 1)
     setRound1Data(newData)
   }
 
-  const updateRound2Change = (e: any, id: string, attr: string, playerIndex: number) => {
+  const updateRound2Change = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>, id: string, attr: string, playerIndex: number) => {
     const newData = [...round2Data]
     const index = newData.findIndex(part => part.id === id)
     newData[index].players[playerIndex][attr] = e.target.value
     setRound2Data(newData)
   }
 
-  const deleteRound2Match = (e: any, id: string) => {
+  const deleteRound2Match = (_e: React.MouseEvent<SVGSVGElement, MouseEvent>, id: string) => {
     const newData = [...round2Data]
     const index = newData.findIndex(part => part.id === id)
     newData.splice(index, 1)
     setRound2Data(newData)
   }
+
 
   useImperativeHandle(_ref, () => ({
     getData:() => {
       return {round1Data, round2Data}
+    },
+    clearAll: () => {
+      setRound1Data([])
+      setRound2Data([])
     }
   }))
 

@@ -6,7 +6,15 @@ import DialogTitle from '@mui/material/DialogTitle';
 import Button from '@mui/material/Button';
 import { DataGrid, GridColDef } from '@mui/x-data-grid';
 import { Typography } from '@mui/material';
-const ResultArea = ({isResultShow, setIsResultShow, resultData}) => {
+import { GetResultRes } from '../../type';
+
+type props = {
+  resultData: GetResultRes
+  isResultShow: boolean
+  setIsResultShow: (val: boolean) => void
+}
+
+const ResultArea = ({isResultShow, setIsResultShow, resultData}: props) => {
   const {sortedResult, pairResult } = resultData
 
   const columns: GridColDef[] = [

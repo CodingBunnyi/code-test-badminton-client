@@ -1,18 +1,16 @@
-const mockRound1Data = [
+import { RoundData } from "./type"
+
+const mockRound1Data: RoundData = [
   {
       "id": "p538_9stqfEziE8wLMBjX",
       "players": [
           {
               "name": "name1",
               "score": "12",
-              "win": 0,
-              "scoreDiff": -9
           },
           {
               "name": "name2",
               "score": "21",
-              "win": 1,
-              "scoreDiff": 9
           }
       ]
   },
@@ -22,14 +20,10 @@ const mockRound1Data = [
           {
               "name": "name3",
               "score": "4",
-              "win": 0,
-              "scoreDiff": -17
           },
           {
               "name": "name4",
               "score": "21",
-              "win": 1,
-              "scoreDiff": 17
           }
       ]
   },
@@ -39,14 +33,10 @@ const mockRound1Data = [
           {
               "name": "name5",
               "score": "15",
-              "win": 0,
-              "scoreDiff": -6
           },
           {
               "name": "name6",
               "score": "21",
-              "win": 1,
-              "scoreDiff": 6
           }
       ]
   },
@@ -56,14 +46,10 @@ const mockRound1Data = [
           {
               "name": "name7",
               "score": "21",
-              "win": 1,
-              "scoreDiff": 9
           },
           {
               "name": "name8",
               "score": "12",
-              "win": 0,
-              "scoreDiff": -9
           }
       ]
   },
@@ -73,14 +59,10 @@ const mockRound1Data = [
           {
               "name": "name9",
               "score": "3",
-              "win": 0,
-              "scoreDiff": -18
           },
           {
               "name": "name10",
               "score": "21",
-              "win": 1,
-              "scoreDiff": 18
           }
       ]
   },
@@ -90,14 +72,10 @@ const mockRound1Data = [
           {
               "name": "name11",
               "score": "5",
-              "win": 0,
-              "scoreDiff": -16
           },
           {
               "name": "name12",
               "score": "21",
-              "win": 1,
-              "scoreDiff": 16
           }
       ]
   },
@@ -107,14 +85,10 @@ const mockRound1Data = [
           {
               "name": "name13",
               "score": "16",
-              "win": 0,
-              "scoreDiff": -5
           },
           {
               "name": "name14",
               "score": "21",
-              "win": 1,
-              "scoreDiff": 5
           }
       ]
   },
@@ -124,14 +98,10 @@ const mockRound1Data = [
           {
               "name": "name15",
               "score": "21",
-              "win": 1,
-              "scoreDiff": 14
           },
           {
               "name": "name16",
               "score": "7",
-              "win": 0,
-              "scoreDiff": -14
           }
       ]
   },
@@ -141,14 +111,10 @@ const mockRound1Data = [
           {
               "name": "name17",
               "score": "21",
-              "win": 1,
-              "scoreDiff": 4
           },
           {
               "name": "name18",
               "score": "17",
-              "win": 0,
-              "scoreDiff": -4
           }
       ]
   },
@@ -158,34 +124,26 @@ const mockRound1Data = [
           {
               "name": "name19",
               "score": "21",
-              "win": 1,
-              "scoreDiff": 8
           },
           {
               "name": "name20",
               "score": "9",
-              "win": 0,
-              "scoreDiff": -8
           }
       ]
   }
 ]
 
-const mockRound2Data = [
+const mockRound2Data: RoundData = [
   {
       "id": "sD5gLbtq99dhjRvFUIJB3",
       "players": [
           {
               "name": "name1",
               "score": "21",
-              "win": 1,
-              "scoreDiff": 16
           },
           {
               "name": "name11",
               "score": "5",
-              "win": 0,
-              "scoreDiff": -16
           }
       ]
   },
@@ -195,14 +153,10 @@ const mockRound2Data = [
           {
               "name": "name2",
               "score": "21",
-              "win": 1,
-              "scoreDiff": 8
           },
           {
               "name": "name12",
               "score": "13",
-              "win": 0,
-              "scoreDiff": -8
           }
       ]
   },
@@ -212,14 +166,10 @@ const mockRound2Data = [
           {
               "name": "name3",
               "score": "21",
-              "win": 1,
-              "scoreDiff": 7
           },
           {
               "name": "name13",
               "score": "14",
-              "win": 0,
-              "scoreDiff": -7
           }
       ]
   },
@@ -229,14 +179,10 @@ const mockRound2Data = [
           {
               "name": "name4",
               "score": "18",
-              "win": 0,
-              "scoreDiff": -3
           },
           {
               "name": "name14",
               "score": "21",
-              "win": 1,
-              "scoreDiff": 3
           }
       ]
   },
@@ -246,14 +192,10 @@ const mockRound2Data = [
           {
               "name": "name5",
               "score": "16",
-              "win": 0,
-              "scoreDiff": -5
           },
           {
               "name": "name15",
               "score": "21",
-              "win": 1,
-              "scoreDiff": 5
           }
       ]
   },
@@ -263,14 +205,10 @@ const mockRound2Data = [
           {
               "name": "name6",
               "score": "6",
-              "win": 0,
-              "scoreDiff": -15
           },
           {
               "name": "name16",
               "score": "21",
-              "win": 1,
-              "scoreDiff": 15
           }
       ]
   },
@@ -280,14 +218,10 @@ const mockRound2Data = [
           {
               "name": "name7",
               "score": "5",
-              "win": 0,
-              "scoreDiff": -16
           },
           {
               "name": "name17",
               "score": "21",
-              "win": 1,
-              "scoreDiff": 16
           }
       ]
   },
@@ -297,14 +231,10 @@ const mockRound2Data = [
           {
               "name": "name8",
               "score": "21",
-              "win": 1,
-              "scoreDiff": 7
           },
           {
               "name": "name18",
               "score": "14",
-              "win": 0,
-              "scoreDiff": -7
           }
       ]
   },
@@ -314,14 +244,10 @@ const mockRound2Data = [
           {
               "name": "name9",
               "score": "16",
-              "win": 0,
-              "scoreDiff": -5
           },
           {
               "name": "name19",
               "score": "21",
-              "win": 1,
-              "scoreDiff": 5
           }
       ]
   },
@@ -331,14 +257,10 @@ const mockRound2Data = [
           {
               "name": "name10",
               "score": "15",
-              "win": 0,
-              "scoreDiff": -6
           },
           {
               "name": "name20",
               "score": "21",
-              "win": 1,
-              "scoreDiff": 6
           }
       ]
   }
