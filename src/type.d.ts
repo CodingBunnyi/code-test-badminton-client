@@ -1,5 +1,5 @@
 export interface InputAreaRef {
-  getData: () => { round1Data: RoundData; round2Data: RoundData };
+  getData: () => { round1Data: RoundData[]; round2Data: RoundData[] };
   clearAll: () => void;
 }
 
@@ -9,11 +9,11 @@ export type RoundData = {
     name: string,
     score: string | number,
   }[]
-}[]
+}
 
 export type GetResultReq = {
-  round1Data: RoundData;
-  round2Data: RoundData;
+  round1Data: RoundData[];
+  round2Data: RoundData[];
 }
 
 export type GetResultRes = {

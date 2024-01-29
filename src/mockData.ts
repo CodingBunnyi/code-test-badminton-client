@@ -1,6 +1,6 @@
 import { RoundData } from "./type"
 
-const mockRound1Data: RoundData = [
+const mockRound1Data: RoundData[] = [
   {
       "id": "p538_9stqfEziE8wLMBjX",
       "players": [
@@ -133,7 +133,7 @@ const mockRound1Data: RoundData = [
   }
 ]
 
-const mockRound2Data: RoundData = [
+const mockRound2Data: RoundData[] = [
   {
       "id": "sD5gLbtq99dhjRvFUIJB3",
       "players": [

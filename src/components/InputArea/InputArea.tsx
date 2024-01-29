@@ -13,8 +13,8 @@ interface InputAreaProps {
   // Define component props here
 }
 const InputArea: React.ForwardRefRenderFunction<InputAreaRef, InputAreaProps> = (_props, _ref) => {
-  const [round1Data, setRound1Data] = useState<RoundData>(mockRound1Data)
-  const [round2Data, setRound2Data] = useState<RoundData>(mockRound2Data)
+  const [round1Data, setRound1Data] = useState<RoundData[]>(mockRound1Data)
+  const [round2Data, setRound2Data] = useState<RoundData[]>(mockRound2Data)
   const updateRound1Change = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>, id: string, attr: string, playerIndex: number) => {
     const newData = [...round1Data]
     const index = newData.findIndex(part => part.id === id)
