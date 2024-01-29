@@ -27,10 +27,26 @@ describe('App component', () => {
     const showResultButton = screen.getByText(/Show Result/i);
     expect(showResultButton).toBeInTheDocument();
 
+    // Check if the "Cleat All" button is rendered
+    const showClearButton = screen.getByText(/Clear All/i);
+    expect(showClearButton).toBeInTheDocument();
+
     // Check if the result area is initially hidden
     const resultArea = screen.queryByTestId('result-area');
     expect(resultArea).not.toBeInTheDocument();
   });
+
+  test('click clear all button to clear the default data', () => {
+    render(<App />);
+    const initialMatches = screen.queryAllByText(/MATCH/i)[0];
+    expect(initialMatches).toBeInTheDocument();
+
+    const showClearButton = screen.getByText(/Clear All/i);
+    fireEvent.click(showClearButton)
+
+    const updatedMatches = screen.queryByText(/MATCH/i);
+    expect(updatedMatches).not.toBeInTheDocument();
+  })
 
   test('clicking "Show Result" button triggers API call and updates state', async () => {
     render(<App />);
